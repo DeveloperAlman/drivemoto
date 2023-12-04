@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png">
+    <link rel="manifest" href="../../../img/site.webmanifest">
+    <link rel="mask-icon" href="../../../img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <title>Drive Moto &mdash; Лодочный мотор Mercury 2.5 М</title>
+</head>
+
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+
+    <main class="main-content">
+        <header class="header" id="header">
+            <div class="header__wrapper header__top">
+                <div class="container">
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Магазины</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Акции</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Доставка и оплата</a>
+                            </li>
+                        </ul>
+
+                        <div class="header__nav-logo">
+                            <a href="#" class="header__nav-logo-link">
+                                <img src="../../../img/logo.svg" alt="" class="header__nav-logo-img" />
+                            </a>
+                        </div>
+
+                        <div class="header__nav-address">
+                            <a href="#" class="header__nav-address-text"><img src="../../../img/address-icon.svg" alt=""
+                                    class="header__nav-address-img" />
+                                Москва, ул. Науки 25</a>
+                        </div>
+
+                        <div class="header__nav-profile">
+                            <ul class="header__nav-profile-list">
+                                <li class="header__nav-profile-item">
+                                    <a href="#" class="header__profile-nav-link"><img
+                                            src="../../../img/profile-like.svg" alt=""
+                                            class="header__profile-nav-img" /></a>
+                                </li>
+                                <li class="header__nav-profile-item">
+                                    <a href="#" class="header__profile-nav-link"><img src="../../../img/profile.svg"
+                                            alt="" class="header__profile-nav-img" /></a>
+                                </li>
+                                <li class="header__nav-profile-item">
+                                    <a href="#" class="header__profile-nav-link cart"><img
+                                            src="../../../img/prodile-cart.svg" alt=""
+                                            class="header__profile-nav-img" />
+                                        <p class="header__nav-profile-number">1</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header__nav-mobile">
+                            <button class="menu cross menu--1 btn-mobile-nav">
+                                <svg viewBox="280 60 550 540" class="menu-mobile">
+                                    <path
+                                        d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                                        class="top_bar" />
+
+                                    <path d="M300,320 L540,320" class="middle_bar" />
+
+                                    <path
+                                        d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                                        class="bottom_bar"
+                                        transform="translate(480, 320) scale(1, -1) translate(-480, -318)" />
+                                </svg>
+                            </button>
+
+                            <div class="header__nav-logo-mobile">
+                                <a href="#header" class="header__nav-logo-link-mobile">
+                                    <img src="../../../img/logo-mobile.svg" alt=""
+                                        class="header__nav-logo-img-mobile" />
+                                </a>
+                            </div>
+
+                            <div class="header__nav-profile header__nav-profile-mobile">
+                                <ul class="header__nav-profile-list">
+                                    <li class="header__nav-profile-item">
+                                        <a href="#" class="header__profile-nav-link"><img
+                                                src="../../../img/profile-like.svg" alt=""
+                                                class="header__profile-nav-img" /></a>
+                                    </li>
+                                    <li class="header__nav-profile-item">
+                                        <a href="#" class="header__profile-nav-link"><img src="../../../img/profile.svg"
+                                                alt="" class="header__profile-nav-img" /></a>
+                                    </li>
+                                    <li class="header__nav-profile-item">
+                                        <a href="#" class="header__profile-nav-link cart"><img
+                                                src="../../../img/prodile-cart.svg" alt=""
+                                                class="header__profile-nav-img" />
+                                            <p class="header__nav-profile-number">1</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="header__nav-list-mobile">
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-profile.svg" alt=""
+                                        class="header__nav-img-mobile">Войти
+                                </a>
+                            </li>
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-profile.svg" alt=""
+                                        class="header__nav-img-mobile">Регистрация
+                                </a>
+                            </li>
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-fav.svg" alt=""
+                                        class="header__nav-img-mobile">Избранное
+                                </a>
+                            </li>
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-cart.svg" alt=""
+                                        class="header__nav-img-mobile">Корзина
+                                </a>
+                            </li>
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-home.svg" alt=""
+                                        class="header__nav-img-mobile">Магазины
+                                </a>
+                            </li>
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-sale.svg" alt="" class="header__nav-img-mobile">Акции
+                                </a>
+                            </li>
+                            <li class="header__nav-item-mobile">
+                                <a href="#" class="header__nav-link-mobile">
+                                    <img src="../../../img/mobile-delivery.svg" alt=""
+                                        class="header__nav-img-mobile">Доставка
+                                    и
+                                    оплата
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="header__wrapper header__bottom">
+                <div class="container">
+                    <div class="header-menu-wrapper">
+                        <ul class="header-menu">
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Квадроциклы</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Катера</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Гидроциклы</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Лодки</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Вездеходы</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Снегоходы</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Двигатели</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#" class="header-menu__link">Запчасти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-item"><a href="../../../index.html"
+                            class="breadcrumbs__list-link">Главная</a></li>
+                    <li class="breadcrumbs__list-item"><a href="../catalog.html"
+                            class="breadcrumbs__list-link">Двигатели</a></li>
+                    <li class="breadcrumbs__list-item"><a href="../products/engine25.html"
+                            class="breadcrumbs__list-link">Лодочный мотор Mercury 2.5 М</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="product-page">
+            <div class="container">
+                <div class="product-page__wrapper">
+                    <div class="product-page__image-box product-page__image--sale">
+                        <div class="product-page__image-wrapper">
+                            <img src="../../../img/engine-1.webp" alt="" class="product-page__img">
+                        </div>
+                        <p class="product-page__price--old"><del>189 000 ₽</del></p>
+                        <p class="product-page__price--new">154 000 ₽</p>
+                        <a href="#" class="product-page__price--find">Нашли дешевле? Снизим цену!</a>
+                    </div>
+                    <div class="product-page__content">
+                        <h1 class="product-page__content-heading">Лодочный мотор Mercury 2.5 М
+                        </h1>
+                        <p class="product-page__content-code">Код товара: 945375-4</p>
+                        <div class="product-page__buttons">
+                            <button class="product-jetsky--favourite product-page-button product-item-btn--favourite"
+                                title="Добавить в избранное">
+                                <svg class="product-item-btn--favourite-img" width="24" height="22" viewBox="0 0 24 22"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                        stroke="#2F3035" stroke-width="1.4" />
+                                </svg>
+                            </button>
+
+                            <button class="product-page-button product-page-rank">
+                                <svg width="20" height="28" viewBox="0 0 20 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="16" y="15.7708" width="4" height="11.7255" rx="2" fill="#2F3035" />
+                                    <rect x="8" y="0.527588" width="4" height="26.9687" rx="2" fill="#2F3035" />
+                                    <rect y="9.90796" width="4" height="17.5883" rx="2" fill="#2F3035" />
+                                </svg>
+                            </button>
+
+                            <div class="product-page-rating">
+                                <div class="rateYo" data-rateyo-rating="4"></div>
+                            </div>
+                        </div>
+                        <div class="product-page__content-text">
+                            <ul class="product-page__content-list product-page__content-list--top">
+                                <li class="product-page__content-item">Производитель</li>
+                                <li class="product-page__content-item">Количество мест, шт: </li>
+                                <li class="product-page__content-item">Мощность, л.с.</li>
+                                <li class="product-page__content-item">Тип двигателя</li>
+                                <li class="product-page__content-item">Год выпуска</li>
+                            </ul>
+
+                            <ul class="product-page__content-list product-page__content-list--bottom">
+                                <li class="product-page__content-item">Канада</li>
+                                <li class="product-page__content-item">3</li>
+                                <li class="product-page__content-item">155</li>
+                                <li class="product-page__content-item">Бензиновый</li>
+                                <li class="product-page__content-item"> 2018</li>
+                            </ul>
+                        </div>
+                        <button class="aside-filter__list-btn product-page__content-btn">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products products-secondary">
+            <div class="container">
+                <div class="products__content">
+                    <h2 class="products__content-heading">С этим товаром покупают</h2>
+                    <div class="products__content-wrapper">
+                        <div class="products__content-tabs">
+                            <a href="#" class="products__content-tabs-tab tab-product">Запчасти</a>
+                            <a href="#" class="products__content-tabs-tab tab-product">Моторы</a>
+                            <a href="#" class="products__content-tabs-tab tab-product">Шины
+                            </a>
+                            <a href="#" class="products__content-tabs-tab tab-product">Электроника</a>
+                            <a href="#" class="products__content-tabs-tab tab-product">Инструменты</a>
+                            <a href="#" class="products__content-tabs-tab tab-product">Аксессуары</a>
+                        </div>
+                    </div>
+                    <div class="products__wrapper">
+                        <div class="product-slider product-slider--jetsky">
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/brp-audio.html" class="product-item product-not-avaliable">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-5.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">
+                                        BRP Audio-портативная система
+                                    </h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">9 800 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/garmin.html" class="product-item">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-6.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">
+                                        Garmin Echomap Plus 62cv
+                                    </h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">44 800 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/key.html" class="product-item product-not-avaliable">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-7.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">RF D.E.S.S.TM Key</h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">9 800 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/costume.html" class="product-item product-item--sale">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-8.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">
+                                        Мужской костюм SeaAdo 3мм
+                                    </h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">6 790 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/brp-port.html" class="product-item product-not-avaliable">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-5.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">
+                                        BRP Audio-портативная система
+                                    </h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">9 800 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/garmin.html" class="product-item">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-6.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">
+                                        Garmin Echomap Plus 62cv
+                                    </h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">44 800 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/key.html" class="product-item product-not-avaliable">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-7.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">RF D.E.S.S.TM Key</h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">9 800 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+
+                            <div class="product">
+                                <button class="product-item-btn--favourite" title="Добавить в избранное">
+                                    <svg class="product-item-btn--favourite-img" width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3212 8.39971L12.6852 8.37208C12.7959 7.8425 13.1633 6.37144 13.9434 5.05035C14.7279 3.72183 15.8288 2.69992 17.382 2.69992C18.3354 2.69992 19.3127 3.03381 20.0457 3.71845C20.7668 4.39211 21.3 5.4506 21.3 7.00292C21.3 8.74111 20.4895 10.7087 18.8413 12.7881C17.2652 14.7765 14.9596 16.8194 12 18.7933C9.04041 16.8194 6.7348 14.7765 5.1587 12.7881C3.51048 10.7087 2.7 8.74111 2.7 7.00292C2.7 5.43024 3.22891 4.372 3.93981 3.70408C4.66207 3.02549 5.62758 2.69792 6.577 2.69792C8.17632 2.69792 9.27564 3.72705 10.0512 5.05255C10.8041 6.33933 11.1611 7.76192 11.3091 8.35175C11.3133 8.36841 11.3173 8.3844 11.3212 8.39971ZM11.6174 20.2181L12 20.4678L12.3826 20.2181C15.6116 18.1109 18.1751 15.8824 19.9384 13.6577C21.697 11.4392 22.7 9.17173 22.7 7.00292C22.7 5.10325 22.0342 3.66023 21.0013 2.69539C19.9802 1.74154 18.6486 1.29992 17.382 1.29992C15.1002 1.29992 13.6271 2.83251 12.7379 4.3385C12.4371 4.8479 12.1915 5.37203 11.9934 5.86578C11.798 5.375 11.5564 4.85284 11.2596 4.34554C10.3739 2.8318 8.90068 1.29792 6.577 1.29792C5.31842 1.29792 3.99543 1.73085 2.98119 2.68376C1.95559 3.64735 1.3 5.09161 1.3 7.00292C1.3 9.17173 2.30302 11.4392 4.06155 13.6577C5.82492 15.8824 8.38843 18.1109 11.6174 20.2181ZM11.3603 3.55015L11.9998 4.98954L12.6396 3.55026C13.6481 1.28164 16.2651 0.300965 18.7304 0.84793C21.134 1.38122 23.3 3.36822 23.3 7.00292C23.3 10.6567 20.5716 15.791 12 21.1754C3.42838 15.791 0.7 10.6567 0.7 7.00292C0.7 3.34539 2.86949 1.36705 5.27255 0.842441C7.74026 0.303717 10.3584 1.29529 11.3603 3.55015Z"
+                                            stroke="#2F3035" stroke-width="1.4" />
+                                    </svg>
+                                </button>
+                                <a href="../../products/costume.html" class="product-item product-item--sale">
+                                    <div class="product-item__hover-text">Посмотреть Товар</div>
+                                    <div class="product-item__img-wrapper">
+                                        <img src="../../../img/product-8.png" alt="" class="product-item-img" />
+                                    </div>
+                                    <h4 class="product-item__title">
+                                        Мужской костюм SeaAdo 3мм
+                                    </h4>
+                                    <p class="product-item__title product-item__notify-text">
+                                        Нет в наличии
+                                    </p>
+                                    <div href="#" class="product-item__title product-item__notify-link">
+                                        <span>Сообщить о поступлении</span>
+                                    </div>
+                                    <p class="product-item__price">6 790 ₽</p>
+                                </a>
+                                <button class="product-item__btn" title="Купить">
+                                    <img src="../../../img/cart.svg" alt="" class="product-item__btn-img" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__top">
+                        <div class="footer-contact">
+                            <p class="footer-contact__heading">
+                                Подпишитесь на нашу рассылку<br />
+                                и узнавайте о акция быстрее
+                            </p>
+                            <form action="#" class="footer-contact__form">
+                                <input type="email" class="footer-contact__form-input" required
+                                    placeholder="Введите ваш e-mail: " />
+                                <button class="footer-contact__form-btn">Отправить</button>
+                            </form>
+                        </div>
+                        <div class="footer-nav">
+                            <p class="footer-nav__heading">Информация</p>
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">О компании</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Контакты</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Акции</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Магазины</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav footer-nav-grid-area">
+                            <p class="footer-nav__heading">Интернет-магазин</p>
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Доставка и самовывоз</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Оплата</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Возврат-обмен</a>
+                                </li>
+                                <li class="footer-nav__item">
+                                    <a href="#" class="footer-nav__link">Новости</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social__link">
+                                <img src="../../../img/instagram.svg" alt="" class="footer-social__link-img" />
+                            </a>
+                            <a href="#" class="footer-social__link">
+                                <img src="../../../img/vk.svg" alt="" class="footer-social__link-img" />
+                            </a>
+                            <a href="#" class="footer-social__link">
+                                <img src="../../../img/facebook.svg" alt="" class="footer-social__link-img" />
+                            </a>
+                            <a href="#" class="footer-social__link">
+                                <img src="../../../img/youtube.svg" alt="" class="footer-social__link-img" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer-copy">
+                            <aside class="footer-copy__text">
+                                © <span class="current-year">2023</span> Drive Moto - Все
+                                права защищены. Разработана верстка в
+                                <a class="anivia" href="https://anivia.se" target="_blank">Anivia Marketing Agency</a>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="../../../js/slick.min.js"></script>
+    <script src="../../../js/jquery.formstyler.min.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

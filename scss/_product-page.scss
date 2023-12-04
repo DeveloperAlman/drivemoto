@@ -1,0 +1,143 @@
+.product-page {
+    &__wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    &__image-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 6rem;
+        transition: all 0.5s ease;
+        animation: opacityMobileProduct 1s ease forwards;
+    }
+
+    &__image-wrapper {
+        max-width: 50rem;
+        max-height: 37.5rem;
+        margin: 7rem 0 4rem 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    &__price--old {
+        font-size: 2.8rem;
+        color: $color-tertiary;
+    }
+
+    &__price--new {
+        font-size: 4.3rem;
+        font-weight: 700;
+    }
+
+    &__price--find {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $color-primary;
+        margin-top: 1.2rem;
+    }
+
+    &__content {
+        width: 60rem;
+
+        &-heading {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        &-code {
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+        }
+
+        &-list {
+            list-style: none;
+        }
+
+        &-item {
+            font-size: 2rem;
+            font-family: 'SF Pro Display';
+            font-weight: 500;
+            line-height: 24px;
+            color: $color-dark;
+            margin-bottom: 2.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid $color-secondary;
+
+            &:last-child {
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-btn {
+            margin: 0;
+        }
+    }
+
+    &__buttons {
+        margin-bottom: 5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &-button {
+        cursor: pointer;
+    }
+
+    &-rating {
+        margin-left: 3rem;
+    }
+
+}
+
+.product-jetsky--favourite {
+    margin: 0;
+    left: 0;
+}
+
+.product-page-rank {
+    margin-left: 7rem;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.product-page__image--sale::before {
+    content: "АКЦИЯ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.6rem;
+    font-family: 'SF Pro Display' !important;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: white;
+    padding: 1.4rem 2.8rem;
+    background: $color-primary;
+    border-radius: 1.4rem;
+}
+
+.product-page__content-list--top .product-page__content-item {
+    padding-right: 10rem;
+}
+
+.product-page__img--width-auto {
+    width: auto;
+}

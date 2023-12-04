@@ -1,0 +1,278 @@
+.products {
+    &__content {
+        &-heading {
+            font-family: 'Proxima Nova Rg';
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &-wrapper {}
+
+        &-tabs {
+            margin-bottom: 4rem;
+
+            &-tab {
+                font-family: 'SF Pro Display';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 2rem;
+                text-decoration: none;
+                color: $color-dark;
+                margin-right: 6rem;
+                transition: all 0.5s ease;
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+            }
+        }
+    }
+
+    &__wrapper {}
+}
+
+.product-slider {
+    margin-bottom: 3rem;
+}
+
+.product {
+    width: 27rem;
+    height: 41.4rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-right: 5rem;
+    transition: all 0.5s ease;
+    position: relative;
+
+    &-item {
+        height: 100%;
+        display: block;
+        color: $color-dark;
+        text-decoration: none !important;
+
+        &-btn--favourite {
+            position: absolute;
+            top: 0;
+            right: 0;
+            outline: none;
+            border: none;
+            display: block;
+            margin: 2rem;
+            background: transparent;
+            transition: all 0.5s ease;
+
+            &-img {
+                display: block;
+                cursor: pointer;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        &__img-wrapper {
+            margin: auto;
+            width: 20rem;
+            height: 20rem;
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+
+        &__title {
+            min-height: 5rem;
+            font-family: 'SF Pro Display';
+            font-weight: 500;
+            font-size: 1.8rem;
+            padding: 0 1.8rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.5s ease;
+        }
+
+        &__price {
+            font-family: 'Barlow';
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 36px;
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-bottom: 5rem;
+            transition: all 0.5s ease;
+        }
+
+        &__btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            outline: none;
+            border: none;
+            background: $color-primary !important;
+            padding: 1rem 1.5rem;
+            border-top-left-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background: darken($color-primary, 10) !important;
+            }
+        }
+    }
+}
+
+.product-item-btn--favourite.product-item-btn--favourite--active svg {
+    fill: $color-primary;
+    stroke: $color-primary !important;
+}
+
+.product-item-btn--favourite.product-item-btn--favourite--active svg path {
+    fill: $color-primary;
+    stroke: $color-primary !important;
+}
+
+.product:hover {
+    box-shadow: 0.5rem 1.5rem 3rem rgba(0, 0, 0, 0.03);
+}
+
+.product-item:hover .product-item__title,
+.product-item:hover .product-item__price {
+    color: $color-primary;
+}
+
+.product-item:hover .product-item__hover-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-item__hover-text {
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 23rem;
+    text-align: center;
+    padding: 1.8rem 2rem;
+    background: #FFFFFF;
+    opacity: 0.95;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product-item--sale::before {
+    content: "Акция";
+    padding: 1rem 2rem;
+    background: $color-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    color: white;
+    border-bottom-right-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Proxima Nova Rg';
+    letter-spacing: 0.1rem;
+}
+
+.product-item__notify-text {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-weight: 700;
+}
+
+.product-item__notify-link span {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary;
+}
+
+.product-item__notify-text {
+    display: none;
+}
+
+.product-item__notify-link {
+    display: none;
+}
+
+.product .product-not-avaliable .product-item__price,
+.product .product-not-avaliable+.product-item__btn {
+    display: none;
+}
+
+.product .product-not-avaliable .product-item__notify-text {
+    display: block;
+}
+
+.product .product-not-avaliable .product-item__notify-link {
+    display: block;
+}
+
+.product-arrow-left {
+    left: -6rem;
+}
+
+.product-arrow-right {
+    right: -2rem;
+}
+
+.products__btn-wrapper {
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.products__btn {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.8rem 4rem;
+    text-decoration: none;
+    background: $color-primary;
+    border-radius: 2rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background: darken($color-primary, 10);
+    }
+}
+
+.products-secondary {
+    margin-bottom: 10rem;
+}
+
+.jet {
+    width: 25rem;
+    height: 19rem;
+
+    & img {
+        height: 100%;
+    }
+}

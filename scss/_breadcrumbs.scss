@@ -1,0 +1,46 @@
+.breadcrumbs {
+    margin: 4rem 0;
+
+    &__list {
+        list-style: none;
+
+        &-item {
+            display: inline-block;
+            margin-left: 1rem;
+            position: relative;
+            padding-right: 2rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+                background: url(../img/bread-arrow.svg) no-repeat center;
+                background-size: contain;
+                width: 1rem;
+                height: 1.5rem;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $color-tertiary;
+            font-weight: 600;
+            font-size: 1.6rem;
+            transition: all 0.5s ease;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.breadcrumbs__list-item:last-child::after {
+    display: none;
+}
